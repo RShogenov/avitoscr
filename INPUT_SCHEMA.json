@@ -1,0 +1,84 @@
+{
+  "title": "Avito Realty input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "citySlug": {
+      "title": "Город (slug)",
+      "type": "string",
+      "description": "Например: moskva, sanktpeterburg, ekaterinburg. Пусто — вся Россия.",
+      "default": "moskva"
+    },
+    "category": {
+      "title": "Категория",
+      "type": "string",
+      "enum": [
+        "kvartiry",
+        "doma_dachi_kottedzhi",
+        "komnaty",
+        "zemelnye_uchastki",
+        "garazhi_i_mashinomesta",
+        "kommercheskaya_nedvizhimost"
+      ],
+      "default": "kvartiry"
+    },
+    "minPrice": {
+      "title": "Мин. цена",
+      "type": "integer",
+      "default": 0
+    },
+    "maxPrice": {
+      "title": "Макс. цена",
+      "type": "integer",
+      "default": 0
+    },
+    "rooms": {
+      "title": "Комнат",
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "default": []
+    },
+    "withImages": {
+      "title": "Только с фото",
+      "type": "boolean",
+      "default": true
+    },
+    "onlyOwner": {
+      "title": "Только от собственника",
+      "type": "boolean",
+      "default": false
+    },
+    "pagesLimit": {
+      "title": "Лимит страниц",
+      "type": "integer",
+      "default": 5
+    },
+    "maxItems": {
+      "title": "Макс. объявлений",
+      "type": "integer",
+      "default": 0
+    },
+    "proxy": {
+      "title": "Apify Proxy groups",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Рекомендуется использовать RESIDENTIAL или SHADER+RESIDENTIAL",
+      "default": [
+        "RESIDENTIAL"
+      ]
+    }
+  },
+  "required": []
+}

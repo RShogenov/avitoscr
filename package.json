@@ -1,0 +1,14 @@
+{
+  "name": "avito-realty-scraper",
+  "version": "1.0.1",
+  "type": "module",
+  "description": "Apify actor: scrape Avito realty buy listings",
+  "dependencies": {
+    "apify": "^3.2.1",
+    "crawlee": "^3.11.0"
+  },
+  "scripts": {
+    "start": "node ./src/main.js",
+    "local": "APIFY_LOCAL_STORAGE_DIR=./storage node ./src/main.js"
+  }
+}

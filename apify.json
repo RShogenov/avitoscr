@@ -1,0 +1,12 @@
+{
+  "name": "Avito Realty Scraper",
+  "defaultDatasetId": "avito-realty",
+  "defaultKeyValueStoreId": "avito-realty-kvs",
+  "defaultRequestQueueId": "avito-realty-queue",
+  "version": "1.0",
+  "buildTag": "latest",
+  "env": {
+    "memoryMbytes": 1024,
+    "timeoutSecs": 3600
+  }
+}
