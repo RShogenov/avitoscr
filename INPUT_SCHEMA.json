@@ -7,6 +7,7 @@
       "title": "Город (slug)",
       "type": "string",
       "description": "Например: moskva, sanktpeterburg, ekaterinburg. Пусто — вся Россия.",
+      "editor": "textfield",
       "default": "moskva"
     },
     "category": {
@@ -20,16 +21,19 @@
         "garazhi_i_mashinomesta",
         "kommercheskaya_nedvizhimost"
       ],
+      "editor": "select",
       "default": "kvartiry"
     },
     "minPrice": {
       "title": "Мин. цена",
       "type": "integer",
+      "editor": "number",
       "default": 0
     },
     "maxPrice": {
       "title": "Макс. цена",
       "type": "integer",
+      "editor": "number",
       "default": 0
     },
     "rooms": {
@@ -37,35 +41,33 @@
       "type": "array",
       "items": {
         "type": "integer",
-        "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5
-        ]
+        "enum": [0, 1, 2, 3, 4, 5]
       },
+      "editor": "multiselect",
       "default": []
     },
     "withImages": {
       "title": "Только с фото",
       "type": "boolean",
+      "editor": "checkbox",
       "default": true
     },
     "onlyOwner": {
       "title": "Только от собственника",
       "type": "boolean",
+      "editor": "checkbox",
       "default": false
     },
     "pagesLimit": {
       "title": "Лимит страниц",
       "type": "integer",
+      "editor": "number",
       "default": 5
     },
     "maxItems": {
       "title": "Макс. объявлений",
       "type": "integer",
+      "editor": "number",
       "default": 0
     },
     "proxy": {
@@ -75,9 +77,8 @@
         "type": "string"
       },
       "description": "Рекомендуется использовать RESIDENTIAL или SHADER+RESIDENTIAL",
-      "default": [
-        "RESIDENTIAL"
-      ]
+      "editor": "multiselect",
+      "default": ["RESIDENTIAL"]
     }
   },
   "required": []
